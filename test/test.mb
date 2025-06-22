@@ -1,0 +1,35 @@
+{
+Author: Jose
+Module: Test
+Comments:
+This is a multiline comment!
+}
+{ This is a comment! }
+
+pause "Test para ver si se pilla"
+pause 1
+pause acme
+pause
+pause "Test" reverse
+pause "Test" underline
+pause "Test" reverse underline
+
+pause "Test" bell
+pause "Test" reverse bell
+pause "Test" underline bell
+pause "Test" reverse underline bell
+
+DATABASE gestio
+define
+variable i smallint default 0
+variable j smallint default 0
+end define
+main begin
+for i = 1 to 20 begin
+for j = 1 to 79 begin
+display "+" at i, j
+end
+view
+end
+pause "Fin del programa"
+end main
