@@ -1,0 +1,132 @@
+===
+String
+===
+
+pause "Hello world!"
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (string_literal))))
+
+===
+Number
+===
+
+pause 1
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (number))))
+
+===
+Identifier
+===
+
+pause acme
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (identifier))))
+
+===
+No args
+===
+
+pause
+
+---
+(source_file
+ (pause
+  (kw_pause)))
+
+===
+Reverse
+===
+
+pause "Message" reverse
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (string_literal))
+  (pause_atributes
+   (kw_reverse))))
+
+===
+Underline
+===
+
+pause "Message" underline
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (string_literal))
+  (pause_atributes
+   (kw_underline))))
+
+===
+Reverse and Underline
+===
+
+pause "Message" reverse underline
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (string_literal))
+  (pause_atributes
+   (kw_reverse)
+   (kw_underline))))
+
+===
+Underline and Reverse
+===
+
+pause "Message" underline reverse
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (pause_expression
+   (string_literal))
+  (pause_atributes
+   (kw_underline)
+   (kw_reverse))))
+
+===
+Repeated atributes
+:error
+===
+
+pause "Message" underline reverse underline
+
+---
+
+===
+Bell
+===
+
+pause bell
+
+---
+(source_file
+ (pause
+  (kw_pause)
+  (kw_bell)))

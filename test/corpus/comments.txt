@@ -1,0 +1,24 @@
+===
+Single line comments
+===
+
+{ Hello world! }
+
+---
+(source_file
+ (comment))
+
+===
+Multiline comments
+===
+
+{
+  this
+is
+    multiline
+}
+
+---
+(source_file
+ (comment))
+

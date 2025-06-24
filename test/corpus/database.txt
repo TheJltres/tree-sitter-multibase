@@ -1,0 +1,59 @@
+===
+Simple database statement
+===
+
+database test
+
+---
+(source_file
+ (database
+  (kw_database)
+  (identifier)))
+
+===
+Database without identifier
+:error
+===
+
+database
+
+---
+
+===
+Comment before database
+===
+
+{ before } database gestio
+
+---
+    (source_file
+     (comment)
+     (database
+      (kw_database)
+      (identifier)))
+
+===
+Comment between database
+===
+
+database { between } gestio
+
+---
+(source_file
+ (database
+  (kw_database)
+  (comment)
+  (identifier)))
+
+===
+Comment after database
+===
+
+database gestio { After }
+
+---
+(source_file
+ (database
+  (kw_database)
+  (identifier))
+ (comment))

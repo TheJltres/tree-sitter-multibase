@@ -1,0 +1,151 @@
+===
+Empty
+===
+
+function func()
+begin
+end function
+
+---
+(source_file
+ (function
+  (kw_function)
+  (identifier)
+  (kw_parentesis_left)
+  (kw_parentesis_right)
+  (kw_begin)
+  (kw_end_function
+   (kw_end)
+   (kw_function))))
+
+===
+Parameters
+===
+
+function func(param1, param2, param3)
+begin
+end function
+
+---
+(source_file
+ (function
+  (kw_function)
+  (identifier)
+  (kw_parentesis_left)
+  (function_parameters
+   (identifier)
+   (kw_comma)
+   (identifier)
+   (kw_comma)
+   (identifier))
+  (kw_parentesis_right)
+  (kw_begin)
+  (kw_end_function
+   (kw_end)
+   (kw_function))))
+
+===
+Variable declaration
+===
+
+function func()
+    field smallint
+begin
+end function
+
+---
+(source_file
+ (function
+  (kw_function)
+  (identifier)
+  (kw_parentesis_left)
+  (kw_parentesis_right)
+  (function_variable
+   (identifier)
+   (define_type
+    (variable_type
+     (kw_smallint))))
+  (kw_begin)
+  (kw_end_function
+   (kw_end)
+   (kw_function))))
+
+===
+Variables declaration
+===
+
+function func()
+    field1 smallint
+    field2 smallint
+begin
+end function
+
+---
+(source_file
+ (function
+  (kw_function)
+  (identifier)
+  (kw_parentesis_left)
+  (kw_parentesis_right)
+  (function_variable
+   (identifier)
+   (define_type
+    (variable_type
+     (kw_smallint))))
+  (function_variable
+   (identifier)
+   (define_type
+    (variable_type
+     (kw_smallint))))
+  (kw_begin)
+  (kw_end_function
+   (kw_end)
+   (kw_function))))
+
+===
+Parameters and variables
+===
+
+function func(param1, param2)
+    field1 smallint
+    field2 smallint
+begin
+end function
+
+---
+(source_file
+ (function
+  (kw_function)
+  (identifier)
+  (kw_parentesis_left)
+  (function_parameters
+   (identifier)
+   (kw_comma)
+   (identifier))
+  (kw_parentesis_right)
+  (function_variable
+   (identifier)
+   (define_type
+    (variable_type
+     (kw_smallint))))
+  (function_variable
+   (identifier)
+   (define_type
+    (variable_type
+     (kw_smallint))))
+  (kw_begin)
+  (kw_end_function
+   (kw_end)
+   (kw_function))))
+
+===
+Variable declarations with attributes
+:error
+===
+
+function func()
+    empresa smallint required
+begin
+end function
+
+---

@@ -1,0 +1,421 @@
+===
+Empty
+===
+
+define
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Variable
+===
+
+define
+variable i smallint
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Variable with atributes
+===
+
+define
+variable i smallint underline
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (atributes
+     (kw_underline))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Variable new
+:error
+===
+
+define
+new variable i smallint
+end define
+
+---
+
+===
+Variable new shared
+===
+
+define
+new shared variable i smallint underline
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable_shared
+     (kw_new)
+     (kw_shared))
+    (kw_variable)
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (atributes
+     (kw_underline))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Variable shared new
+:error
+===
+
+define
+shared new variable i smallint underline
+end define
+
+---
+
+===
+Variable like
+===
+
+define
+variable i like table.column
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (define_type_like
+      (kw_like)
+      (identifier)
+      (kw_dot)
+      (identifier)))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Variable like with atributes
+===
+
+define
+variable i like table.column underline
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (define_type_like
+      (kw_like)
+      (identifier)
+      (kw_dot)
+      (identifier)))
+    (atributes
+     (kw_underline))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Variable with comments
+===
+
+define
+new { a } shared { b } variable { c } i { d } smallint { d } underline
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable_shared
+     (kw_new)
+     (comment)
+     (kw_shared))
+    (comment)
+    (kw_variable)
+    (comment)
+    (identifier)
+    (comment)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (comment)
+    (atributes
+     (kw_underline))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Parameter
+===
+
+define
+parameter[1] a smallint
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_parameter
+    (kw_parameter)
+    (define_parameter_order
+     (kw_bracket_left)
+     (number)
+     (kw_bracket_right))
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Parameter with like
+===
+
+define
+parameter[1] a like table.column
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_parameter
+    (kw_parameter)
+    (define_parameter_order
+     (kw_bracket_left)
+     (number)
+     (kw_bracket_right))
+    (identifier)
+    (define_type
+     (define_type_like
+      (kw_like)
+      (identifier)
+      (kw_dot)
+      (identifier)))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Parameter with parameters
+===
+
+define
+parameter[1] a smallint required underline
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_parameter
+    (kw_parameter)
+    (define_parameter_order
+     (kw_bracket_left)
+     (number)
+     (kw_bracket_right))
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (atributes
+     (kw_required))
+    (atributes
+     (kw_underline))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Parameter with like and parameters
+===
+
+define
+parameter[1] a like table.column required underline
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_parameter
+    (kw_parameter)
+    (define_parameter_order
+     (kw_bracket_left)
+     (number)
+     (kw_bracket_right))
+    (identifier)
+    (define_type
+     (define_type_like
+      (kw_like)
+      (identifier)
+      (kw_dot)
+      (identifier)))
+    (atributes
+     (kw_required))
+    (atributes
+     (kw_underline))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Include
+===
+
+define
+variable i smallint include (value)
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (atributes
+     (attribute_include
+      (kw_include)
+      (kw_parentesis_left)
+      (attribute_incluce_value
+       (identifier))
+      (kw_parentesis_right)))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Include to
+===
+
+define
+variable i smallint include (1 to 2)
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (atributes
+     (attribute_include
+      (kw_include)
+      (kw_parentesis_left)
+      (attribute_incluce_value
+       (number)
+       (kw_to)
+       (number))
+      (kw_parentesis_right)))))
+  (kw_end_define
+   (kw_end)
+   (kw_define))))
+
+===
+Include values and to
+===
+
+define
+variable i smallint include (value, 1 to 2, value)
+end define
+
+---
+(source_file
+ (define
+  (kw_define)
+  (define_body
+   (define_variable
+    (kw_variable)
+    (identifier)
+    (define_type
+     (variable_type
+      (kw_smallint)))
+    (atributes
+     (attribute_include
+      (kw_include)
+      (kw_parentesis_left)
+      (attribute_incluce_value
+       (identifier))
+      (kw_comma)
+      (attribute_incluce_value
+       (number)
+       (kw_to)
+       (number))
+      (kw_comma)
+      (attribute_incluce_value
+       (identifier))
+      (kw_parentesis_right)))))
+    (kw_end_define
+     (kw_end)
+     (kw_define))))

@@ -1,26 +1,183 @@
 [
   {
+    "type": "atribute_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_default",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "atributes",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "atribute_default",
+          "named": true
+        },
+        {
+          "type": "attribute_include",
+          "named": true
+        },
+        {
+          "type": "kw_autonext",
+          "named": true
+        },
+        {
+          "type": "kw_check",
+          "named": true
+        },
+        {
+          "type": "kw_comments",
+          "named": true
+        },
+        {
+          "type": "kw_downshift",
+          "named": true
+        },
+        {
+          "type": "kw_format",
+          "named": true
+        },
+        {
+          "type": "kw_help",
+          "named": true
+        },
+        {
+          "type": "kw_left",
+          "named": true
+        },
+        {
+          "type": "kw_lookup",
+          "named": true
+        },
+        {
+          "type": "kw_noentry",
+          "named": true
+        },
+        {
+          "type": "kw_noupdate",
+          "named": true
+        },
+        {
+          "type": "kw_picture",
+          "named": true
+        },
+        {
+          "type": "kw_queryclear",
+          "named": true
+        },
+        {
+          "type": "kw_required",
+          "named": true
+        },
+        {
+          "type": "kw_reverse",
+          "named": true
+        },
+        {
+          "type": "kw_right",
+          "named": true
+        },
+        {
+          "type": "kw_scroll",
+          "named": true
+        },
+        {
+          "type": "kw_underline",
+          "named": true
+        },
+        {
+          "type": "kw_upshift",
+          "named": true
+        },
+        {
+          "type": "kw_verify",
+          "named": true
+        },
+        {
+          "type": "kw_zerofill",
+          "named": true
+        },
         {
           "type": "number",
           "named": true
         },
         {
-          "type": "reverse_kw",
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute_incluce_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "kw_to",
+          "named": true
+        },
+        {
+          "type": "number",
           "named": true
         },
         {
           "type": "string_literal",
           "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute_include",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_incluce_value",
+          "named": true
         },
         {
-          "type": "underline_kw",
+          "type": "kw_comma",
+          "named": true
+        },
+        {
+          "type": "kw_include",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_left",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_right",
           "named": true
         }
       ]
@@ -40,26 +197,11 @@
       "required": true,
       "types": [
         {
-          "type": "database_kw",
+          "type": "identifier",
           "named": true
         },
         {
-          "type": "database_name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "database_name",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
+          "type": "kw_database",
           "named": true
         }
       ]
@@ -74,26 +216,41 @@
       "required": true,
       "types": [
         {
-          "type": "define_kw",
+          "type": "define_body",
           "named": true
         },
         {
-          "type": "define_parameters",
+          "type": "kw_define",
           "named": true
         },
         {
-          "type": "define_variables",
-          "named": true
-        },
-        {
-          "type": "end_define_kw",
+          "type": "kw_end_define",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "define_parameters",
+    "type": "define_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "define_parameter",
+          "named": true
+        },
+        {
+          "type": "define_variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define_parameter",
     "named": true,
     "fields": {},
     "children": {
@@ -105,22 +262,91 @@
           "named": true
         },
         {
+          "type": "define_parameter_order",
+          "named": true
+        },
+        {
+          "type": "define_type",
+          "named": true
+        },
+        {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "kw_parameter",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define_parameter_order",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_bracket_left",
+          "named": true
+        },
+        {
+          "type": "kw_bracket_right",
           "named": true
         },
         {
           "type": "number",
           "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "define_type_like",
+          "named": true
         },
         {
-          "type": "variable_types",
+          "type": "variable_type",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "define_variables",
+    "type": "define_type_like",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "kw_dot",
+          "named": true
+        },
+        {
+          "type": "kw_like",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define_variable",
     "named": true,
     "fields": {},
     "children": {
@@ -132,11 +358,364 @@
           "named": true
         },
         {
+          "type": "define_type",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
         {
-          "type": "variable_types",
+          "type": "kw_variable",
+          "named": true
+        },
+        {
+          "type": "kw_variable_shared",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "database",
+          "named": true
+        },
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "function_parameters",
+          "named": true
+        },
+        {
+          "type": "function_variable",
+          "named": true
+        },
+        {
+          "type": "global",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "kw_begin",
+          "named": true
+        },
+        {
+          "type": "kw_end_function",
+          "named": true
+        },
+        {
+          "type": "kw_function",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_left",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_right",
+          "named": true
+        },
+        {
+          "type": "local",
+          "named": true
+        },
+        {
+          "type": "main",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "kw_comma",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "define_type",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "global_control",
+          "named": true
+        },
+        {
+          "type": "kw_end_global",
+          "named": true
+        },
+        {
+          "type": "kw_global",
+          "named": true
+        },
+        {
+          "type": "options",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global_control",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_control",
+          "named": true
+        },
+        {
+          "type": "kw_end_control",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_control",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_control",
+          "named": true
+        },
+        {
+          "type": "kw_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_define",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_define",
+          "named": true
+        },
+        {
+          "type": "kw_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_end",
+          "named": true
+        },
+        {
+          "type": "kw_function",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_global",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_end",
+          "named": true
+        },
+        {
+          "type": "kw_global",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_local",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_end",
+          "named": true
+        },
+        {
+          "type": "kw_local",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_main",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_end",
+          "named": true
+        },
+        {
+          "type": "kw_main",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_end_options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_end",
+          "named": true
+        },
+        {
+          "type": "kw_options",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_main_begin",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_begin",
+          "named": true
+        },
+        {
+          "type": "kw_main",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "kw_variable_shared",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_new",
+          "named": true
+        },
+        {
+          "type": "kw_shared",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "local",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_end_local",
+          "named": true
+        },
+        {
+          "type": "kw_local",
+          "named": true
+        },
+        {
+          "type": "options",
           "named": true
         }
       ]
@@ -151,10 +730,6 @@
       "required": true,
       "types": [
         {
-          "type": "comment",
-          "named": true
-        },
-        {
           "type": "database",
           "named": true
         },
@@ -163,26 +738,34 @@
           "named": true
         },
         {
-          "type": "end_main_kw",
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "global",
+          "named": true
+        },
+        {
+          "type": "kw_end_main",
+          "named": true
+        },
+        {
+          "type": "kw_main_begin",
+          "named": true
+        },
+        {
+          "type": "local",
           "named": true
         },
         {
           "type": "main",
-          "named": true
-        },
-        {
-          "type": "main_kw",
-          "named": true
-        },
-        {
-          "type": "pause",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "pause",
+    "type": "options",
     "named": true,
     "fields": {},
     "children": {
@@ -190,30 +773,22 @@
       "required": true,
       "types": [
         {
-          "type": "bell_kw",
+          "type": "kw_end_options",
           "named": true
         },
         {
-          "type": "pause_expression",
+          "type": "kw_options",
           "named": true
         },
         {
-          "type": "pause_kw",
-          "named": true
-        },
-        {
-          "type": "reverse_kw",
-          "named": true
-        },
-        {
-          "type": "underline_kw",
+          "type": "options_body",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "pause_expression",
+    "type": "options_body",
     "named": true,
     "fields": {},
     "children": {
@@ -221,15 +796,265 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "options_help_box",
+          "named": true
+        },
+        {
+          "type": "options_help_file",
+          "named": true
+        },
+        {
+          "type": "options_help_message",
+          "named": true
+        },
+        {
+          "type": "options_menu_line",
+          "named": true
+        },
+        {
+          "type": "options_message_line",
+          "named": true
+        },
+        {
+          "type": "options_message_on",
+          "named": true
+        },
+        {
+          "type": "options_no_message",
+          "named": true
+        },
+        {
+          "type": "options_no_shell",
+          "named": true
+        },
+        {
+          "type": "options_printer",
+          "named": true
+        },
+        {
+          "type": "options_prompt_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_help_box",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_at",
+          "named": true
+        },
+        {
+          "type": "kw_box",
+          "named": true
+        },
+        {
+          "type": "kw_comma",
+          "named": true
+        },
+        {
+          "type": "kw_help",
+          "named": true
+        },
+        {
+          "type": "kw_with",
           "named": true
         },
         {
           "type": "number",
           "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_help_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_file",
+          "named": true
+        },
+        {
+          "type": "kw_help",
+          "named": true
         },
         {
           "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_help_message",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_help",
+          "named": true
+        },
+        {
+          "type": "kw_message",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_menu_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_line",
+          "named": true
+        },
+        {
+          "type": "kw_menu",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_message_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_line",
+          "named": true
+        },
+        {
+          "type": "kw_message",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_message_on",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_message",
+          "named": true
+        },
+        {
+          "type": "kw_on",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_no_message",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_message",
+          "named": true
+        },
+        {
+          "type": "kw_no",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_no_shell",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_no",
+          "named": true
+        },
+        {
+          "type": "kw_shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_printer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_printer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_prompt_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_line",
+          "named": true
+        },
+        {
+          "type": "kw_prompt",
+          "named": true
+        },
+        {
+          "type": "number",
           "named": true
         }
       ]
@@ -245,10 +1070,6 @@
       "required": false,
       "types": [
         {
-          "type": "comment",
-          "named": true
-        },
-        {
           "type": "database",
           "named": true
         },
@@ -257,24 +1078,83 @@
           "named": true
         },
         {
-          "type": "main",
+          "type": "function",
           "named": true
         },
         {
-          "type": "pause",
+          "type": "global",
+          "named": true
+        },
+        {
+          "type": "local",
+          "named": true
+        },
+        {
+          "type": "main",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "variable_types",
+    "type": "variable_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_date",
+          "named": true
+        },
+        {
+          "type": "kw_integer",
+          "named": true
+        },
+        {
+          "type": "kw_smallint",
+          "named": true
+        },
+        {
+          "type": "kw_time",
+          "named": true
+        },
+        {
+          "type": "variable_type_char",
+          "named": true
+        },
+        {
+          "type": "variable_type_decimal",
+          "named": true
+        },
+        {
+          "type": "variable_type_serial",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_type_char",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "kw_char",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_left",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_right",
+          "named": true
+        },
         {
           "type": "number",
           "named": true
@@ -283,47 +1163,325 @@
     }
   },
   {
-    "type": "(",
-    "named": false
+    "type": "variable_type_decimal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_comma",
+          "named": true
+        },
+        {
+          "type": "kw_decimal",
+          "named": true
+        },
+        {
+          "type": "kw_money",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_left",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_right",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
   },
   {
-    "type": ")",
-    "named": false
-  },
-  {
-    "type": ",",
-    "named": false
-  },
-  {
-    "type": ".",
-    "named": false
-  },
-  {
-    "type": "bell_kw",
-    "named": true
-  },
-  {
-    "type": "database_kw",
-    "named": true
-  },
-  {
-    "type": "define_kw",
-    "named": true
-  },
-  {
-    "type": "end_define_kw",
-    "named": true
-  },
-  {
-    "type": "end_main_kw",
-    "named": true
+    "type": "variable_type_serial",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kw_parentesis_left",
+          "named": true
+        },
+        {
+          "type": "kw_parentesis_right",
+          "named": true
+        },
+        {
+          "type": "kw_serial",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "identifier",
     "named": true
   },
   {
-    "type": "main_kw",
+    "type": "kw_at",
+    "named": true
+  },
+  {
+    "type": "kw_autonext",
+    "named": true
+  },
+  {
+    "type": "kw_begin",
+    "named": true
+  },
+  {
+    "type": "kw_box",
+    "named": true
+  },
+  {
+    "type": "kw_bracket_left",
+    "named": true
+  },
+  {
+    "type": "kw_bracket_right",
+    "named": true
+  },
+  {
+    "type": "kw_char",
+    "named": true
+  },
+  {
+    "type": "kw_check",
+    "named": true
+  },
+  {
+    "type": "kw_comma",
+    "named": true
+  },
+  {
+    "type": "kw_comments",
+    "named": true
+  },
+  {
+    "type": "kw_control",
+    "named": true
+  },
+  {
+    "type": "kw_database",
+    "named": true
+  },
+  {
+    "type": "kw_date",
+    "named": true
+  },
+  {
+    "type": "kw_decimal",
+    "named": true
+  },
+  {
+    "type": "kw_default",
+    "named": true
+  },
+  {
+    "type": "kw_define",
+    "named": true
+  },
+  {
+    "type": "kw_dot",
+    "named": true
+  },
+  {
+    "type": "kw_downshift",
+    "named": true
+  },
+  {
+    "type": "kw_end",
+    "named": true
+  },
+  {
+    "type": "kw_file",
+    "named": true
+  },
+  {
+    "type": "kw_format",
+    "named": true
+  },
+  {
+    "type": "kw_function",
+    "named": true
+  },
+  {
+    "type": "kw_global",
+    "named": true
+  },
+  {
+    "type": "kw_help",
+    "named": true
+  },
+  {
+    "type": "kw_include",
+    "named": true
+  },
+  {
+    "type": "kw_integer",
+    "named": true
+  },
+  {
+    "type": "kw_left",
+    "named": true
+  },
+  {
+    "type": "kw_like",
+    "named": true
+  },
+  {
+    "type": "kw_line",
+    "named": true
+  },
+  {
+    "type": "kw_local",
+    "named": true
+  },
+  {
+    "type": "kw_lookup",
+    "named": true
+  },
+  {
+    "type": "kw_main",
+    "named": true
+  },
+  {
+    "type": "kw_menu",
+    "named": true
+  },
+  {
+    "type": "kw_message",
+    "named": true
+  },
+  {
+    "type": "kw_money",
+    "named": true
+  },
+  {
+    "type": "kw_new",
+    "named": true
+  },
+  {
+    "type": "kw_no",
+    "named": true
+  },
+  {
+    "type": "kw_noentry",
+    "named": true
+  },
+  {
+    "type": "kw_noupdate",
+    "named": true
+  },
+  {
+    "type": "kw_on",
+    "named": true
+  },
+  {
+    "type": "kw_options",
+    "named": true
+  },
+  {
+    "type": "kw_parameter",
+    "named": true
+  },
+  {
+    "type": "kw_parentesis_left",
+    "named": true
+  },
+  {
+    "type": "kw_parentesis_right",
+    "named": true
+  },
+  {
+    "type": "kw_picture",
+    "named": true
+  },
+  {
+    "type": "kw_printer",
+    "named": true
+  },
+  {
+    "type": "kw_prompt",
+    "named": true
+  },
+  {
+    "type": "kw_queryclear",
+    "named": true
+  },
+  {
+    "type": "kw_required",
+    "named": true
+  },
+  {
+    "type": "kw_reverse",
+    "named": true
+  },
+  {
+    "type": "kw_right",
+    "named": true
+  },
+  {
+    "type": "kw_scroll",
+    "named": true
+  },
+  {
+    "type": "kw_serial",
+    "named": true
+  },
+  {
+    "type": "kw_shared",
+    "named": true
+  },
+  {
+    "type": "kw_shell",
+    "named": true
+  },
+  {
+    "type": "kw_smallint",
+    "named": true
+  },
+  {
+    "type": "kw_time",
+    "named": true
+  },
+  {
+    "type": "kw_to",
+    "named": true
+  },
+  {
+    "type": "kw_underline",
+    "named": true
+  },
+  {
+    "type": "kw_upshift",
+    "named": true
+  },
+  {
+    "type": "kw_variable",
+    "named": true
+  },
+  {
+    "type": "kw_verify",
+    "named": true
+  },
+  {
+    "type": "kw_with",
+    "named": true
+  },
+  {
+    "type": "kw_zerofill",
     "named": true
   },
   {
@@ -331,19 +1489,7 @@
     "named": true
   },
   {
-    "type": "pause_kw",
-    "named": true
-  },
-  {
-    "type": "reverse_kw",
-    "named": true
-  },
-  {
     "type": "string_literal",
-    "named": true
-  },
-  {
-    "type": "underline_kw",
     "named": true
   },
   {
