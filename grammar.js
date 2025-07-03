@@ -25,6 +25,7 @@ module.exports = grammar({
       $.local,
       $.main,
       $.function,
+      $.pause,
     ),
 
     //#region Comment
@@ -401,11 +402,11 @@ module.exports = grammar({
       $.kw_parentesis_left,
       repeat(
         seq(
-          $.attribute_incluce_value,
+          $.attribute_include_value,
           repeat(
             seq(
               $.kw_comma,
-              $.attribute_incluce_value,
+              $.attribute_include_value,
             ),
           ),
         ),
@@ -413,7 +414,7 @@ module.exports = grammar({
       $.kw_parentesis_right,
     ),
 
-    attribute_incluce_value: $ => choice(
+    attribute_include_value: $ => choice(
       $.string_literal,
       $.identifier,
       $.number,

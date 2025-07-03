@@ -343,7 +343,7 @@ end define
      (attribute_include
       (kw_include)
       (kw_parentesis_left)
-      (attribute_incluce_value
+      (attribute_include_value
        (identifier))
       (kw_parentesis_right)))))
   (kw_end_define
@@ -373,7 +373,7 @@ end define
      (attribute_include
       (kw_include)
       (kw_parentesis_left)
-      (attribute_incluce_value
+      (attribute_include_value
        (number)
        (kw_to)
        (number))
@@ -405,15 +405,15 @@ end define
      (attribute_include
       (kw_include)
       (kw_parentesis_left)
-      (attribute_incluce_value
+      (attribute_include_value
        (identifier))
       (kw_comma)
-      (attribute_incluce_value
+      (attribute_include_value
        (number)
        (kw_to)
        (number))
       (kw_comma)
-      (attribute_incluce_value
+      (attribute_include_value
        (identifier))
       (kw_parentesis_right)))))
     (kw_end_define

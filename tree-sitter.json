@@ -9,6 +9,7 @@
       "file-types": [
         "mb"
       ],
+      "highlights": "queries/highlights.scm",
       "injection-regex": "^multibase$",
       "class-name": "TreeSitterMultibase"
     }
