@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-multibase
+module github.com/thejltres/tree-sitter-multibase
 
 go 1.22
 

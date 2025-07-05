@@ -2,7 +2,7 @@
   "name": "tree-sitter-multibase",
   "version": "0.1.0",
   "description": "Parser for the base100 language MultiBase",
-  "repository": "https://github.com/tree-sitter/tree-sitter-multibase",
+  "repository": "https://github.com/thejltres/tree-sitter-multibase",
   "license": "MIT",
   "author": {
     "name": "Jose Luis Tresserras Merino",
